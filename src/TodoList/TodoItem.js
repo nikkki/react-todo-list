@@ -5,16 +5,19 @@ import './TodoItem.css';
 export default class TodoItem extends Component {
     constructor(props) {
         super(props);
-        this.handleToggleCheckbox = this.handleToggleCheckbox.bind(this)
+        this.handleToggleCheckbox = this.handleToggleCheckbox.bind(this);
+        this.handleDeleteButton = this.handleDeleteButton.bind(this);
     }
 
     handleToggleCheckbox(ev) {
-        // console.log('props', this.props);
-        // console.log('typeof ', typeof ev.target.checked);
         this.props.onToggleCheckbox({
             id: this.props.itemData.id,
             isReady: ev.target.checked,
         });
+    }
+
+    handleDeleteButton() {
+        this.props.onDeleteButton(this.props.itemData.id);
     }
 
     render() {
@@ -23,15 +26,18 @@ export default class TodoItem extends Component {
         });
         return (
             <div className="todo-item">
-                <input type="checkbox"
-                    defaultChecked={this.props.itemData.isReady}
-                    onChange={this.handleToggleCheckbox}
-                />
-                <span className={classes}>
-                    {this.props.itemData.text}
-                </span>
+                <label className="todo-item__label">
+                    <input type="checkbox"
+                        defaultChecked={this.props.itemData.isReady}
+                        onChange={this.handleToggleCheckbox}
+                    />
+                    <span className={classes}>
+                        {this.props.itemData.text}
+                    </span>
+                </label>
                 {/* <span>Edit</span> */}
-                <button className="todo-item__delete">   x</button>
+                <button className="todo-item__delete" onClick={this.handleDeleteButton}>x</button>
+                <div className="clearfix"></div>
             </div>
         )
     }

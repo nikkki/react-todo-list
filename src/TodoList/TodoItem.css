@@ -1,11 +1,22 @@
-.todo-item{}
+.todo-item{
+    padding: 7px 10px;
+    background-color: #e1e1e1;
+    margin: 10px 0;
+    border-radius: 2px;
+    word-wrap: break-word;
+}
+
+.todo-item__label {
+    float: left;
+}
 
 .todo-item__delete{
-    outline: 0;
     background-color: #ff8080;
+    border-radius: 2px;
     border: 0;
     color: #fff;
     transition: top 1s ease-out 0.5s;
+    float: right;
 }
 
 .todo-item__delete:hover{
@@ -18,4 +29,8 @@
 }
 .overline {
     text-decoration: line-through;
+}
+
+.clearfix{
+    clear: both;
 }

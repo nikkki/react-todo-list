@@ -1,0 +1,26 @@
+.todo-create-bar{
+    display: flex;
+    justify-content: space-around;
+}
+
+.todo-input{
+    flex-grow: 5;
+    border: 1px solid #53ff7e;
+    padding: 5px;
+    border-radius: 2px;
+    margin-right: 5px;
+}
+
+.todo-add-btn{
+    background-color: #53ff7e;
+    border-radius: 2px;
+    border: 0;
+    color: #fff;
+    transition: top 1s ease-out 0.5s;
+    float: right;
+    flex-grow: 1;
+}
+
+.todo-add-btn:active{
+    box-shadow: inset -1px 1px 1px 1px rgba(0,0,0,0.75);
+}
