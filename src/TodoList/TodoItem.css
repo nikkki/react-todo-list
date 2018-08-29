@@ -1,0 +1,21 @@
+.todo-item{}
+
+.todo-item__delete{
+    outline: 0;
+    background-color: #ff8080;
+    border: 0;
+    color: #fff;
+    transition: top 1s ease-out 0.5s;
+}
+
+.todo-item__delete:hover{
+    cursor: pointer;
+}
+.todo-item__delete:active{
+    -webkit-box-shadow: inset -1px -1px 1px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset -1px -1px 1px 1px rgba(0,0,0,0.75);
+    box-shadow: inset -1px 1px 1px 1px rgba(0,0,0,0.75);
+}
+.overline {
+    text-decoration: line-through;
+}
